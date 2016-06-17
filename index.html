@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link href="css/oufslan.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="js/oufslan.js"></script>
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col-sm-4">
+                    <h1>seveur</h1>
+                    <hr>
+                    <div class="zone">
+                        <div id="servers">
+                            <select id="tf2-server"></select>
+                            <button type="button" class="btn btn-sm">modifier</button>
+                        </div>
+                    </div>
+                    <h1>Infos</h1>
+                    <hr>
+                    <div id="info"></div>
+                    <div id="rules"></div>
+                    <div id="players"></div>
+                </div>
+                <div class="col-sm-5">
+                    <h1>Reglages</h1>
+                    <hr>
+                    <div class="row" id="settings">
+                        <div class="zone">
+                            <div id="current-map">
+                                <label>Map en cours</label>
+                                <div id="current-map-div"></div>
+                            </div>
+                            <div id="maps">
+                                <label for="maps-input">Liste des map <br>
+                                    <a href="https://wiki.teamfortress.com/wiki/List_of_maps/fr" target="_blank">description</a>
+                                </label>
+                                <select multiple id="maps-input"></select>
+                                <button type="button" class="btn btn-sm">lancer map</button>
+                            </div>
+                            <div id="restart-map">
+                                <label>Redemarrage map (sec)</label>
+                                <input type="text" id="restart-map-input" >
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                            <div id="restart-server">
+                                <label>Arreter le serveur</label>
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                        </div>
+                        <div class="zone">
+                            <div id="sv-cheats">
+                                <label>Cheats</label>
+                                <input type="checkbox" id="sv-cheats-input" value="sv-cheats">
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                        </div>
+                        <div class="zone">
+                            <h2 id="tournament-lbl">Mode tournoi : </h2>
+                            <br>
+                            <div id="mp-tournament">
+                                <h2>Configuration initiale</h2>
+                                <label>Activer le mode tournoi</label>
+                                <input type="checkbox" id="mp-tournament-input" value="mp-tournament">
+                                <br>
+                                <label class="tournoi-only">Armes de base <br><small>(actif seulement en mode tournament)</small></label>
+                                <input class="tournoi-only" type="checkbox" id="weapons-input" value="mp-tournament" checked>
+                                <br>
+                                <button type="button" class="btn btn-sm">Mettre à jour</button>
+                            </div>
+                            <h2>Actions</h2>
+                            <div id="mp-tournament-teamname">
+                                <label class="tournoi-only">Nom équipe <font color="blue">bleue</font></label>
+                                <input class="tournoi-only" type="text" id="mp_tournament_blueteamname" style="width: 300px; text-align: left;">
+                                <button type="button" class="btn btn-sm">ok</button>
+                                <br>
+                                <label class="tournoi-only">Nom équipe <font color="red">rouge</font></label>
+                                <input class="tournoi-only" type="text" id="mp_tournament_redteamname"  style="width: 300px; text-align: left;">
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>  
+                            <div id="mp_tournament_restart">
+                                <label class="tournoi-only">Redémarrer le tournoi</label>
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                            
+                        </div>
+                        <div class="zone">
+                            <div id="say">
+                                <label for="say-input">Faire une annonce</label>
+                                <textarea rows="2" cols="50" id="say-input"></textarea>
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                        </div>
+                        <div class="zone">
+                            <div id="time-limit">
+                                <label for="sayInput">Limite de temps</label>
+                                <input type="text" id="time-limit-input">
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                            <div id="winning-rounds">
+                                <label>Rounds gagnants</label>
+                                <input type="text" id="winning-rounds-input" value="4" >
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                            <div id="max-rounds">
+                                <label>Max Rounds</label>
+                                <input type="text" name="round" id="max-rounds-input">
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                        </div>
+                        <div class="zone">
+                            <div id="randomize-teams">
+                                <label>Melanger les equipes</label>
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                            <div id="auto-balance-teams">
+                                <label>Auto equilibrage</label>
+                                <input type="checkbox" id="auto-balance-teams-input" value="">
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                        </div>
+                        <div class="zone">
+                            <div id="rcon">
+                                <label>Commande rcon libre</label>
+                                <input type="text" id="rcon-input" style="width: 300px; text-align: left;">
+                                <button type="button" class="btn btn-sm">ok</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <h1>Configuration du serveur</h1>
+                    <hr>
+                    <div id="server-vars"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1 class="modal-title">Merci de patienter</h1>
+                    </div>
+                    <div class="modal-body">
+                        <span>rafraichissement des informations en cours</span>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="serverModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Serveurs</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
+body{
+    font-size: 12px;
+    font-family: 'Oxygen', sans-serif;
+}
+textarea, select{
+    vertical-align: middle;
+}
+h1{
+    font-size: 15px;
+    margin: 4px 0px 4px 0px;
+    font-weight: bold;
+}
+h2{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
+hr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+li{
+    list-style-type: none;
+}
+.row {
+    margin: 0;
+}
+.table>thead>tr>td{
+    vertical-align: middle;
+}
+#maps{
+    display: inline-block;
+}
+#maps select{
+    height: 150px;
+    width: 200px;
+}
+#maps .btn{
+    display: inline;
+    vertical-align: top;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    display: block;
+    margin: 2px;
+    text-align: center;
+}
+#say{
+    display: inline-block; 
+}
+#settings label{
+    min-width: 300px;
+    vertical-align: middle;
+    font-weight: 100;
+}
+#settings input[type=text]{
+    width: 30px;
+    text-align: center;
+    padding: 2px 2px 2px 2px;
+    border: solid 1px #DDDDDD;
+}
+.btn{
+    margin: 2px;
+    vertical-align: middle;
+    background-color: rgb(90, 179, 243);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table{
+    font-size: 12px;
+}
+.table thead {
+    background-color: #F5F5F5;
+    color: #8A8A8A;
+    font-weight: bold;
+}
+.zone{
+    background-color: #F5F5F5;
+    padding: 5px;
+    margin: 0px 0px 2px 0px;
+    border-radius: 3px;
+}
+#current-map-div{
+    display: inline-block;
+    font-weight: bold;
+    color: blue;
+    
+}
+#server-vars{
+    margin-top: 5px;
+    height: 92%;
+    overflow-y: scroll;
+}
+.tournoi-only{
+    pointer-events: none;
+    opacity: 0.3;
+}
+.tournoi-only-enabled{
+    pointer-events: auto;
+    opacity: 1;
+}
